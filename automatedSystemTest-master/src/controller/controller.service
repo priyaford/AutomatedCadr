@@ -1,0 +1,15 @@
+[Unit]
+Description=My service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u controller/controller.py
+WorkingDirectory=/home/pi/automatedSystemTest
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+RestartSec=300s
+User=root
+
+[Install]
+WantedBy=multi-user.target

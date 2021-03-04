@@ -1,0 +1,5 @@
+logfile: logs/2019_09_16_12_11_39.txt
+
+Imei: 444
+
+exit

@@ -1,0 +1,24 @@
+Dependencies
+
+Starting from raspbian image Buster
+sudo apt-get update
+sudo apt-get upgrade
+
+raspberry:
+sudo apt-get install mosquitto mosquitto-clients libglib2.0-dev
+sudo systemctl enable mosquitto
+
+
+python:
+sudo pip3 install bluepy firebase-admin paho-mqtt
+
+sudo cp bleconnecter.service /etc/systemd/system/bleconnecter.service
+sudo systemctl enable bleconnecter.service // ONLY WHEN CODE IS STABLE
+
+
+Test Setup:
+devices must have Systemtest Enabled
+This can be done by entering the deviceIds or imeis into config.mainConfig serverTestSettings
+
+then you start the test by running enterTest.python
+and then start the raspberry pi with main.py

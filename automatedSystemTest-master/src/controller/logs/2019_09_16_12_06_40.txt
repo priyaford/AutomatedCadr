@@ -1,0 +1,3 @@
+logfile: logs/2019_09_16_12_06_40.txt
+
+exit

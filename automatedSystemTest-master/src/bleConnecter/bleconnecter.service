@@ -1,0 +1,15 @@
+[Unit]
+Description=My service
+After=network.target
+
+[Service]
+ExecStartPre=/bin/sleep 15
+ExecStart=/usr/bin/python3 -u bleconnecter.py
+WorkingDirectory=/home/pi/bleconnecter
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

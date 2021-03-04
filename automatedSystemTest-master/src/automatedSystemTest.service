@@ -1,0 +1,10 @@
+[Unit]
+Description=automated System Test
+ After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/pi/automatedSystemTest/automatedSystemTest.py
+
+[Install]
+WantedBy=multi-user.target
